@@ -1,0 +1,10 @@
+.login-modifier{
+    text-align: center;
+}
+.login-modifier h1{
+    color: red;
+    font-size: 50px;
+}
+.login-modifier label{
+    font-size: 20px;
+}

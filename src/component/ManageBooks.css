@@ -1,0 +1,22 @@
+.manage-books{
+    border: 1px solid black;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.manage-books tr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.manage-books tr th{
+    font-size: 20px;
+    border-left: 1px solid white;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+.manage-books tr td{
+    font-size: 15px;
+    margin-right: 10px;
+    justify-content: space-between;
+    position: absolute;
+}

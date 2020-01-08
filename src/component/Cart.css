@@ -1,0 +1,23 @@
+.cart{
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
+.cart tr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: coral;
+}
+.cart tr th{
+    font-size: 20px;
+    border-left: 1px solid white;
+    width:80px;
+
+}
+.cart tr td{
+    font-size: 15px;
+    width:105px;
+    padding: 8px;
+    background-color: white;
+    /* justify-content: space-between; */
+}

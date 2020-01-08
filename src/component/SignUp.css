@@ -1,0 +1,13 @@
+.form-modifier{
+    text-align: center;
+}
+.form-modifier h1{
+    font-size: 50px;
+    color: red;
+}
+.form-modifier label{
+    font-size: 20px;
+}
+.form-modifier label input{
+    padding-right: 50px;
+}

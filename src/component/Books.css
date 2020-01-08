@@ -1,0 +1,21 @@
+.book-box-modifier {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.book-modifier {
+    border: 2px solid black;
+    width: auto;
+    height: auto;
+    align-items: center;
+    background-color: gray;
+    color: white;
+    margin: 50px;
+    padding: 10px;
+    font-size: 20px;
+}
+.book-modifier tr button{
+ font-size: 20px;
+ margin-top: 20px;
+}
