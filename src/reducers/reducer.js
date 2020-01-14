@@ -1,7 +1,7 @@
 const isState = {
     data: [],
     isClick: false,
-    currentItem: []
+    currentItem: [],
 }
 // var dataList={};
 const reducer = (state = isState, action) => {
@@ -17,9 +17,11 @@ const reducer = (state = isState, action) => {
                 data: action.payload
             }
         case "CURRENT_DATA":
+        console.log("@@@@@@@+++",...state.currentItem)
+        // console.log("qtyyyy",state.qty);
             return {
                 ...state,
-                currentItem : [...state.currentItem, action.payload]
+                currentItem : [...state.currentItem, ...action.payload]
             }
         default:
             return state

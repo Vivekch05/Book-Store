@@ -20,6 +20,7 @@ export const currentData = (e) => {
         const currentItem = await json.filter(item => {
             return item.id === id
         })
+        console.log("currentItem",currentItem)
         dispatch({ type: 'CURRENT_DATA', payload: currentItem });
     }
 }

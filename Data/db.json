@@ -5,7 +5,7 @@
             "name":"javascript",
             "title": "vivek",
             "tags": "[JS]",
-            "price":"500",
+            "price":500,
             "pages":"150",
             "category":"Technical"
           },
@@ -14,7 +14,7 @@
             "name":"java",
             "title": "tanu",
             "tags": "[JS]",
-            "price":"800",
+            "price":800,
             "pages":"350",
             "category":"Technical"
           },
@@ -23,7 +23,7 @@
             "name":"c",
             "title": "nancy",
             "tags": "[JS]",
-            "price":"100",
+            "price":100,
             "pages":"50",
             "category":"Technical"
           },
@@ -32,7 +32,7 @@
             "name":"c++",
             "title": "kritika",
             "tags": "[JS]",
-            "price":"400",
+            "price":400,
             "pages":"180",
             "category":"Technical"
           },
@@ -41,7 +41,7 @@
             "name":"react",
             "title": "shubham",
             "tags": "[JS]",
-            "price":"580",
+            "price":580,
             "pages":"190",
             "category":"Technical"
           },
@@ -50,62 +50,9 @@
             "name":"typescript",
             "title": "ravi",
             "tags": "[JS]",
-            "price":"700",
+            "price":700,
             "pages":"650",
-            "category":"Technical"
-          },{
-            "id":"javascript",
-            "name":"javascript",
-            "title": "vivek",
-            "tags": "[JS]",
-            "price":"500",
-            "pages":"150",
-            "category":"Technical"
-          },
-          {
-            "id":"java",
-            "name":"java",
-            "title": "tanu",
-            "tags": "[JS]",
-            "price":"800",
-            "pages":"350",
-            "category":"Technical"
-          },
-          {
-            "id":"c",
-            "name":"c",
-            "title": "nancy",
-            "tags": "[JS]",
-            "price":"100",
-            "pages":"50",
-            "category":"Technical"
-          },
-          {
-            "id":"c++",
-            "name":"c++",
-            "title": "kritika",
-            "tags": "[JS]",
-            "price":"400",
-            "pages":"180",
-            "category":"Technical"
-          },
-          {
-            "id":"react",
-            "name":"react",
-            "title": "shubham",
-            "tags": "[JS]",
-            "price":"580",
-            "pages":"190",
-            "category":"Technical"
-          },
-          {
-            "id":"typescript",
-            "name":"typescript",
-            "title": "ravi",
-            "tags": "[JS]",
-            "price":"700",
-            "pages":"650",
-            "category":"Technical"
+            "category":"Biology"
           }
         ]
       }
