@@ -1,0 +1,474 @@
+/* Header */
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.nav-menu.sticky{
+    position: -webkit-sticky;
+  position: sticky;
+}
+.nav-menu-link {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    height: 40px;
+    width: 212px;
+    padding-top: 10px;
+    transition: width 2s height 2s;
+    background-image: linear-gradient(to bottom, black, blue);
+}
+.nav-menu-link:hover{
+    background-image: linear-gradient(to bottom, black, green);
+    width:215px;
+    height: 45px; 
+}
+.nav-menu-link.active{
+    background-image: linear-gradient(to bottom, black, brown);
+
+}
+
+
+/* Books */
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-list>div {
+    background-image: linear-gradient(to bottom, black,lightslategrey);
+    width: 200px;
+    height: 250px;
+    margin: 25px;
+    font-size: 20px;
+    border: 1px solid black;
+    color: white;
+    border-radius: 5px;
+    transition: width 2s, height 2s, background-image 2s;
+}
+.book-list>div:hover{
+    background-image: linear-gradient(to bottom, black,blue);
+    width: 220px;
+    height: 270px;
+
+}
+
+.book-list>div h3 {
+    text-align: center;
+}
+
+.book-list>div p {
+    margin-left: 20px;
+}
+
+.book-list>div p span {
+    float: right;
+    padding-right: 30px;
+}
+.book-list>div button{
+    margin:0 50px;
+    padding: 5px;
+    width: 100px;
+    height: 35px;
+    background-image: linear-gradient(to bottom,black, brown,sandybrown);
+    border: 1px solid black;
+    color:white ;
+    font-size: 20px;
+    /* transition: transform 1s; */
+}
+.book-list>div button:hover{
+    background-image: linear-gradient(to bottom,black, yellow);
+    /* transform: rotate(-5deg); */
+}
+
+/* Cart */
+
+.cart {
+    border: 1px solid black;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.cart tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cart tr th {
+    font-size: 20px;
+    border-left: 1px solid black;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 15px;
+    background-image: linear-gradient(to bottom,brown, coral);
+
+}
+
+.cart tr td {
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    background-color:thistle;
+    border: 1px solid white;
+    /* justify-content: space-between; */
+}
+.cart tr td button{
+    background-image: linear-gradient(to bottom,black,brown);
+    border: 1px solid black;
+    width: 100px;
+    height: 35px;
+    color: white;
+    font-size: 15px;
+    transition: width 2s height 2s transform 2s;
+}
+.cart tr td button:hover{
+    background-image: linear-gradient(to bottom,black,red); 
+    transform: rotate(2deg);
+    width: 102px;
+    height: 37px;
+}
+
+.cart-summary{
+    background-color: whitesmoke;
+}
+.cart-summary h1{
+    font-size: 35px;
+    margin-left: 30px;
+}
+.cart-summary span{
+    font-size: 20px;
+    margin: 40px;
+}
+.cart-summary button{
+    margin-left: 770px;
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom,black,brown);
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: width 2s height 2s transform 2s;
+}
+.cart-summary button:hover{
+    width:155px;
+    height: 55px;
+    transform: rotate(2deg,-2deg);
+    background-image: linear-gradient(to bottom,black,red);
+}
+
+/* Checkout */
+.checkout{
+    background-color: whitesmoke;
+}
+.checkout p{
+    font-size: 20px;
+}
+.checkout span{
+    font-size: 20px;
+    margin: 30px;
+}
+
+.formHandler {
+    border: 1px solid black;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 30px;
+    background-image: linear-gradient(to bottom,black ,cornflowerblue);
+    width: 650px;
+    margin-bottom: 20px;
+}
+.formHandler label{
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+}
+.formHandler label input{
+    width:350px;
+    height: 35px;
+    float: right;
+}
+.formHandler label textarea{
+    width:350px;
+    height: 50px;
+    float: right;
+}
+.formHandler span input{
+    float: right;
+    margin: 25px;
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(to bottom,black,green);
+    color: white;
+    font-size: 20px;
+    border: 1px solid black;
+    transition: width 2s height 2s;
+}
+.formHandler span input:hover{
+    background-image: linear-gradient(to bottom,black,seagreen);
+    width: 155px;
+    height: 45px;
+}
+
+
+
+/* Manage Books */
+.manage-books {
+    border: 1px solid black;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.manage-books tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.manage-books tr th {
+    font-size: 20px;
+    border-left: 1px solid black;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 15px;
+    background-image: linear-gradient(to bottom,brown, coral);
+
+}
+
+.manage-books tr td {
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    background-color:thistle;
+    border: 1px solid white;
+    /* justify-content: space-between; */
+}
+.manage-books tr span{
+    background-color: thistle;
+}
+
+.manage-books tr span button{
+    background-image: linear-gradient(to bottom,black,brown);
+    border: 1px solid black;
+    width: 110px;
+    height: 40px;
+    color: white;
+    margin: 5px;
+    font-size: 15px;
+    transition: width 2s height 2s;
+}
+.manage-books tr span button:hover{
+    background-image: linear-gradient(to bottom,black,green); 
+    width: 112px;
+    height: 42px;
+}
+.manage-books-create button{
+    background-image: linear-gradient(to bottom,black,green);
+    border: 1px solid black;
+    width: 150px;
+    height: 40px;
+    color: white;
+    margin: 30px;
+    font-size: 20px;
+    transition: width 2s height 2s;
+}
+.manage-books-create button:hover{
+    background-image: linear-gradient(to bottom,black,seagreen);
+    width: 155px;
+    height: 45px;
+}
+
+
+/* Manage Orders */
+.manage-orders {
+    border: 1px solid black;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.manage-orders tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.manage-orders tr th {
+    font-size: 20px;
+    border-left: 1px solid black;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 15px;
+    background-image: linear-gradient(to bottom,brown, coral);
+
+}
+
+.manage-orders tr td {
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    background-color:thistle;
+    border: 1px solid white;
+    /* justify-content: space-between; */
+}
+.manage-orders tr span{
+    background-color: thistle;
+}
+
+.manage-orders tr span button{
+    background-image: linear-gradient(to bottom,black,green);
+    border: 1px solid black;
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    margin: 5px;
+    transition: width 2s height 2s;
+}
+.manage-orders tr span button:hover{
+    background-image: linear-gradient(to bottom,black,seagreen); 
+    width: 205px;
+    height: 42px;
+}
+
+/* Admin book create edit */
+
+.admin-book-head{
+    background-image: linear-gradient(to bottom,black ,cornflowerblue);
+    width: 650px;
+    margin: 20px 20px 0 20px;
+    border: 1px solid black;
+}
+.admin-book-head h1{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 20px;
+}
+.admin-book{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: inline-flex;
+    margin-left: 30px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+.admin-book label{
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+}
+.admin-book label input{
+    width: 350px;
+    height: 35px;
+    float: right;
+}
+.admin-book label select{
+    width: 350px;
+    float: right;
+    height: 35px;
+}
+.admin-book span input{
+    float: right;
+    margin: 25px;
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(to bottom,black,green);
+    color: white;
+    font-size: 20px;
+    border: 1px solid black;
+    transition: width 2s height 2s;
+}
+.admin-book span input:hover{
+    background-image: linear-gradient(to bottom,black,seagreen);
+    width: 155px;
+    height: 45px;
+}
+
+/* Order Details */
+.order-details{
+    background-color: whitesmoke;
+    margin-left: 20px;
+}
+.order-details p{
+    font-size: 20px;
+}
+.order-details-address{
+    background-color: whitesmoke;
+    margin-left: 40px;
+}
+.order-details-address span{
+    font-size: 20px;
+    margin: 5px;
+}
+
+/* Contact Form  */
+.contact-form-head{
+    background-image: linear-gradient(to bottom,black ,cornflowerblue);
+    width: 550px;
+    margin: 20px 20px 0 20px;
+    border: 1px solid black;
+}
+.contact-form-head h1{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 20px;
+}
+.contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: inline-flex;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.contact-form label{
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+}
+.contact-form label input{
+    width: 300px;
+    height: 40px;
+    float: right;
+}
+.contact-form label textarea{
+    width: 300px;
+    height: 60px;
+    float: right;
+}
+.contact-form span{
+    margin-left: 170px;
+}
+.contact-form span input{
+    margin-left: 5px;
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(to bottom,black,green);
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    transition: width 2s height 2s;
+}
+.contact-form span input:hover{
+background-image: linear-gradient(to bottom,black,seagreen);
+width: 152px;
+height: 45px;
+}

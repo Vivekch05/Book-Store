@@ -1,28 +1,51 @@
 import React, { Component } from 'react';
-import './ManageBooks.css';
+import './BookStore.css';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 class ManageBooks extends Component {
+    handleEdit = (item) =>{
+        console.log("item------",item.id);
+
+        this.props.history.push(`/AdminBookEdit/${item.id}`);
+    }
+    handleCreate =()=>{
+        this.props.history.push("./AdminBookCreate");
+    }
     render() {
         return (
             <div>
                 <h1>Admin-Manage Books</h1>
-                <button>Create Book</button>
+                <div className="manage-books-create"><button onClick={this.handleCreate}>Create Book</button></div>
                 <table className="manage-books">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Edit</th>
+                        <th style={{width:"250px"}}>Edit</th>
                     </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Vivek</td>
-                        <td>
-                            <button>Edit</button>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
+                    {
+                        this.props.result.map(item => {
+                            return (
+                                <div>
+                                    <tr>
+                                        <td>{item.id}</td>
+                                        <td>{item.name}</td>
+                                        <span  style={{width:"250px"}}>
+                                            <button onClick={() =>this.handleEdit(item)}>Edit</button>
+                                            <button>Delete</button>
+                                        </span>
+                                    </tr>
+                                </div>
+                            )
+                        })
+                    }
                 </table>
             </div>
         )
     }
 }
-export default ManageBooks;
+const mapStateToProps = (state) => {
+    return {
+        result: state.result
+    }
+}
+export default withRouter(connect(mapStateToProps)(ManageBooks));

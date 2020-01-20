@@ -26,24 +26,23 @@ class Contact extends Component {
     }
 
     render() {
-        const mapStyles = {
-            width: "100%",
-            height: "20%"
-        };
+        const mapStyle = {
+            width: "55%",
+            height: "73%",
+            margin:"0 0 0 600px"
+        }
 
         return (
             <div>
-                <div style={{ textAlign: "center" }}>
-                    <h1 style={{ color: "red" }}>Our Location</h1>
-                    <Map
-                        google={this.props.google}
-                        zoom={8}
-                        style={mapStyles}
-                        initialCenter={{ lat: 47.444, lng: -122.176 }}
-                    >
-                        {this.displayMarkers()}
-                    </Map>
-                </div><br /><br /><br /><br /><br /><br />
+                <h1 style={{ color: "red" }}>Our Location</h1>
+                <Map
+                    google={this.props.google}
+                    zoom={8}
+                    initialCenter={{ lat: 47.444, lng: -122.176 }}
+                    style={mapStyle}
+                >
+                    {this.displayMarkers()}
+                </Map>
                 <ContactForm />
             </div>
         );

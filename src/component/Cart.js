@@ -1,71 +1,42 @@
 import React, { Component } from 'react';
-import './Cart.css';
+import './BookStore.css';
 import { connect } from 'react-redux';
-// import CheckOut from './CheckOut';
-import {withRouter} from 'react-router-dom'
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-// import { currentData } from '../actions/action';
+import { withRouter } from 'react-router-dom';
+import { currentResult } from '../actions/action';
 class Cart extends Component {
 
-    handleCheckout = ()=>{
+    componentDidMount() {
+        if (this.props.result1.length === 0) {
+            this.props.changeResult();
+        }
+    }
+    handleCheckout = () => {
         this.props.history.push('./CheckOut')
     }
-
+        
     render() {
-
-
-        // console.log("++++++++++", this.props);
-        const { currentItem1 } = this.props;
-        console.log({ currentItem1 });
-        const result = [];
-        const map = new Map();
-        for (const item of currentItem1) {
-            let count = currentItem1.filter((obj) => obj.id === item.id).length;
-            if (!map.has(item.id)) {
-                map.set(item.id)
-                result.push({
-                    id: item.id,
-                    name: item.name,
-                    price: item.price,
-                    category: item.category,
-                    qty: count,
-                    total: 0
-                })
-            }
-        }
-
+        console.log(this.props);
+        let totalAmount = this.props.totalAmount;
+        let totalItem = this.props.totalItem;
+        // const { currentItem1 } = this.props;
+        const { result1 } = this.props;
+        // console.log({ currentItem1 });
         const handleRemove = (e) => {
-            for (const item of result) {
+            for (const item of result1) {
                 if (e.target.id === item.id) {
-                    result.pop(e.target.id);
-                    console.log("result", result);
-
+                    result1.pop(e.target.id);
+                    console.log("result", result1);
                 }
             }
-            getContent(result);
-
         }
-
-
-
-        let totalItem = 0;
-        let totalAmount = 0;
         const getContent = (result1) => {
-
             return (
                 result1.map((item, index) => {
-
                     let total = (item.category) === "Technical" ?
                         (item.qty) * (item.price) - ((item.qty) * (item.price) * 10) / 100 : (item.qty) * (item.price);
-
                     let category = (item.category) === "Technical" ? "10%" : ""
-
-                    totalItem = totalItem + (item.qty);
-                    totalAmount = totalAmount + total;
-
                     return (
                         item.length !== 0 &&
-
                         <tr>
                             <td>{item.id}</td>
                             <td>{item.price}</td>
@@ -77,9 +48,7 @@ class Cart extends Component {
                                 <button id={item.id} onClick={handleRemove}>Remove</button>
                             </td>
                         </tr>
-
                     )
-
                 })
             );
         }
@@ -97,20 +66,30 @@ class Cart extends Component {
                         <th>Total</th>
                         <th>Remove</th>
                     </tr>
-                    {getContent(result)}
+                    {getContent(result1)}
                 </table>
-                <h1>Cart Summary</h1>
-                <p>Total Amount :{totalAmount}</p>
-                <p>Total Item:{totalItem}</p>
-                <button onClick={this.handleCheckout}>Checkout</button>
+                <div className="cart-summary">
+                    <h1>Cart Summary</h1>
+                    <span><b>Total Amount :</b>{totalAmount}</span><br /><br /><br />
+                    <span><b>Total Item:</b>{totalItem}</span>
+                    <button onClick={this.handleCheckout}>Checkout</button>
+                </div>
             </div>
         )
     }
 }
 const mapStateToProps = (state) => {
+
     return {
         currentItem1: state.currentItem,
-        result1:state.result
+        totalItem: state.totalItem,
+        totalAmount: state.totalAmount,
+        result1: state.result,
     }
 }
-export default withRouter(connect(mapStateToProps)(Cart));
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeResult: () => { dispatch(currentResult()) }
+    }
+}
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cart));

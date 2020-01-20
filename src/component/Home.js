@@ -9,10 +9,9 @@ const Home = () =>{
             display="flex"
             flexWrap="wrap"
             width="100%"
-            height="550px"
+            height="600px"
             />
         </div>
     )
 }
-
 export default Home;

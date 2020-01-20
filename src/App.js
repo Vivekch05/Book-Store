@@ -11,20 +11,34 @@ import ManageBooks from './component/ManageBooks';
 import Login from './component/Login';
 import SignUp from './component/SignUp';
 import './App.css';
+import OrderDetails from './component/OrderDetails';
+import ManageOrders from './component/ManageOrders';
+import AdminBookEdit from './component/AdminBookEdit';
+import AdminBookCreate from './component/AdminBookCreate';
 
 class App extends Component {
+  handleLogin=()=>{
+    this.props.history.push('./Login');
+  }
   render() {
     return (
-      <Router className="app-body">
-        <h1>BookStore</h1>
-        <Header />
+      <Router className="app-theme">
+        <div className="app-body">
+        <span><b>BookStore</b></span>
+        <button>SignUp</button>
+        <button>Login</button></div>
+        <Header /><br/>
         <hr />
         <Switch>
           <Route path='/' component={Home} exact />
           <Route path='/books' component={Books} />
           <Route path='/cart' component={Cart} />
           <Route path='/checkout' component={CheckOut} />
+          <Route path='/OrderDeatails' component={OrderDetails} />
           <Route path='/managebooks' component={ManageBooks} />
+          <Route path='/manageOrders' component={ManageOrders} />
+          <Route path='/adminBookEdit/:id' component={AdminBookEdit} />
+          <Route path='/adminBookCreate' component={AdminBookCreate} />
           <Route path='/contact' component={Contact} />
           <Route path='/login' component={Login} />
           <Route path='/signup' component={SignUp} />

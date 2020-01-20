@@ -1,3 +1,29 @@
 .app-body{
-  background-color: aliceblue;
+  
+}
+.app-body >span{
+  font-size: 50px;
+  font-weight: 500;
+ 
+}
+.app-body button{
+  float: right;
+  width: 100px;
+  height: 40px;
+  margin-top:10px;
+  margin-right: 30px;
+  background-image: linear-gradient(to bottom, black,blue);
+  border: 1px solid red;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  transition: transform 2s;
+}
+.app-body button:hover{
+  transform: rotate(1deg);
+  background-image: linear-gradient(to bottom,black,red);
+
+}
+.app-theme{
+  background-color: black;
 }
