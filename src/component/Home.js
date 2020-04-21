@@ -4,7 +4,7 @@ const Home = () =>{
     return(
         <div style={{margin:"10px"}}>
             <h1>Home</h1>
-            <img src = {process.env.PUBLIC_URL + "/book3.jpg"}
+            <img src = {process.env.PUBLIC_URL + "/book1.jpg"}
             alt="Books"
             display="flex"
             flexWrap="wrap"
