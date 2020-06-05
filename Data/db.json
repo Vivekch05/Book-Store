@@ -55,22 +55,6 @@
       "category": "Biology"
     },
     {
-      "name": "jkfhkefhk",
-      "price": "8357835",
-      "pages": "3489578",
-      "category": "",
-      "author": "lgghghk",
-      "id": "EgjNzYS"
-    },
-    {
-      "name": "fsjkdfk",
-      "price": "89234783",
-      "pages": "93587",
-      "category": "",
-      "author": "jkhgdj",
-      "id": "Z-_6hJw"
-    },
-    {
       "name": "vivek",
       "price": "123",
       "pages": "123",
@@ -95,20 +79,28 @@
       "id": "ajYqiJi"
     },
     {
-      "name": "asdf",
-      "price": "123",
-      "pages": "123",
-      "author": "sdd",
-      "category": "",
-      "id": "hJvzeYI"
-    },
-    {
       "name": "Shubham",
       "price": "245",
       "pages": "267",
       "author": "Shubham",
       "category": "",
       "id": "2ZD5srK"
+    },
+    {
+      "name": "vivek8",
+      "price": "12",
+      "pages": "100",
+      "author": "sidd",
+      "category": "",
+      "id": "pZPyxQ0"
+    },
+    {
+      "name": "JAVA",
+      "price": "6",
+      "pages": "21",
+      "author": "NEHA",
+      "category": "",
+      "id": "vj_dnJY"
     }
   ]
 }

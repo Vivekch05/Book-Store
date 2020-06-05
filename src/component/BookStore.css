@@ -43,8 +43,8 @@
 
 .book-list>div {
     background-image: linear-gradient(to bottom,cornsilk,white);
-    width: 200px;
-    height: 250px;
+    width: 195px;
+    height: 245px;
     margin: 25px;
     font-size: 20px;
     border: 1px solid black ;
@@ -56,8 +56,8 @@
 .book-list>div:hover{
     background-image: linear-gradient(to bottom, wheat,white);
     box-shadow: 0 8px 18px rgba(0,0,0,0.9);
-    width: 205px;
-    height: 255px;
+    width: 200px;
+    height: 250px;
 
 }
 

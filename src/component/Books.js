@@ -23,7 +23,7 @@ class Books extends Component {
                             console.log("itemmmmm", item);
                             return (
                                 <div>
-                                    <h3>{item.id}</h3>
+                                    <h3>{item.name}</h3>
                                     <p>Price:<span>{item.price}</span></p>
                                     <p>Author:<span>{item.author}</span></p>
                                     <p>Pages:<span>{item.pages}</span></p>

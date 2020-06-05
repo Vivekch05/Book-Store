@@ -1,7 +1,7 @@
 export const anotherData = () => {
     return async (dispatch) => {
         const axios = require('axios');
-        const response = await axios.get(`http://localhost:3001/books`);
+        const response = await axios.get(`http://localhost:3000/books`);
         // const json = await response.json();
         // console.log("&&&%%%%%%", json);
         console.log("responce",response);
@@ -15,7 +15,7 @@ export const currentData = (e) => {
         const axios = require('axios');
         console.log("&&&&&&&&&&&", e.target.id);
         const id = e.target.id;
-        const response = await axios.get(`http://localhost:3001/books`);
+        const response = await axios.get(`http://localhost:3000/books`);
         // const json = await response.json();
         const currentItem = await response.data.filter(item => {
             return item.id === id
