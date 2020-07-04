@@ -1,7 +1,7 @@
 export const anotherData = () => {
     return async (dispatch) => {
         const axios = require('axios');
-        const response = await axios.get(`http://localhost:8000/books`);
+        const response = await axios.get(`https://my-json-server.typicode.com/Vivekch05/json-server/books`);
         // const json = await response.json();
         // console.log("&&&%%%%%%", json);
         console.log("responce",response);
@@ -15,7 +15,7 @@ export const currentData = (e) => {
         const axios = require('axios');
         console.log("&&&&&&&&&&&", e.target.id);
         const id = e.target.id;
-        const response = await axios.get(`http://localhost:8000/books`);
+        const response = await axios.get(`https://my-json-server.typicode.com/Vivekch05/json-server/books`);
         // const json = await response.json();
         const currentItem = await response.data.filter(item => {
             return item.id === id
@@ -41,7 +41,7 @@ export const adminBookCreate = (state) =>{
     return(dispatch) =>{
         const axios = require('axios');
 
-        const response = axios.post(`http://localhost:8000/books`,{
+        const response = axios.post(`https://my-json-server.typicode.com/Vivekch05/json-server/books`,{
             name:state.name,
             price:state.price,
             pages:state.pages,
@@ -63,7 +63,7 @@ export const adminBookEdit = (state) =>{
     console.log("stateeeeeeeee",state);
     return(dispatch) =>{
         const axios = require('axios');
-        const response = axios.put(`http://localhost:8000/books/${state.id}`,{
+        const response = axios.put(`https://my-json-server.typicode.com/Vivekch05/json-server/books/${state.id}`,{
             name:state.name,
             price:state.price,
             pages:state.pages,
