@@ -18,7 +18,7 @@ class AdminBookCreate extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.adminBookCreate1(this.state);
-        this.props.history.push('./ManageBooks');
+        //this.props.history.push('./ManageBooks');
         console.log("stateeeeeeeeeeee", this.state);
     }
     render() {
