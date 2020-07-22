@@ -49,5 +49,5 @@ class Contact extends Component {
     }
 }
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyDh0Vo9xqZASPy3jhMVc7G_1SpfcTWvqK4'
+    apiKey: ''
 })(Contact);
